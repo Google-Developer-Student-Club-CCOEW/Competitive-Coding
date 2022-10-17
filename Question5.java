@@ -50,3 +50,16 @@ public class Question5 {
 	}
 
 }
+/*Input:
+4
+aeiou
+abxy
+aebcdefghij
+abcdeeaifg
+
+Output:
+WINNER
+LOOSER
+LOOSER
+WINNER
+*/
