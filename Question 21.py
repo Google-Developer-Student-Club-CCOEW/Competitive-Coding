@@ -19,5 +19,9 @@ def matching_palindrome():
     l = min(p[i] for i in range(2, (len(p)-2)+1) if p[i] != 0 and p[1+p[i]] == p[i] and p[(len(p)-2)-(N-p[i])] == N-p[i])
     return P[:l]
 
-for case in range(int(input())):
-    print('Case #%d: %s' % (case+1, matching_palindrome()))
+
+def main():
+    for case in range(int(input())):
+        print('Case #%d: %s' % (case+1, matching_palindrome()))
+if __name__=='__main__':
+    main()
