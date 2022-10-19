@@ -22,5 +22,9 @@ def pali():
     a = list(input().strip())
     return "POSSIBLE" if iter(a) else "IMPOSSIBLE"
 
-for j in range(int(input())):
-    print('Case #%d: %s' % (j+1, pali()))
+def main():
+    for j in range(int(input())):
+        print('Case #%d: %s' % (j+1, pali()))
+
+if __name__=='__main__':
+    main()
