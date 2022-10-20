@@ -1,4 +1,3 @@
-package que19;
 import java.util.*;
 
 public class Main {
@@ -7,16 +6,21 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		char arr[][]=new char[100][100];	//will store char array of O's and I's
 		cal obj= new cal();					//call cal
+		
 
 		int T=sc.nextInt();					// Asking for num of text cases
-		for(int i=0; i<T; i++) {			
-			arr=obj.accept();				//accepting vals 
-			obj.count(arr);					//counting "I"
-			obj.solve();					//calculating answer
-		}
+		int sol[]=new int[T];
 		
 		for(int i=0; i<T; i++) {
-			obj.print_ans(i+1);				//displaying answers
+			//System.out.println(i);
+			arr=obj.accept();				//accepting vals 
+			obj.count(arr);					//counting "I"
+			sol[i]=obj.solve( (i+1));					//calculating answer
+		}
+		
+		//display
+		for(int i=0; i<T; i++) {
+			obj.display(i+1, sol[i]);
 		}
 
 	}
@@ -39,7 +43,7 @@ class cal {
 			temp=column[c];
 			for (int r=0; r<2*N; r++) {
 				a[c][r]=temp.charAt(r);		
-				
+
 
 			}
 		}
@@ -49,6 +53,7 @@ class cal {
 
 	public void count(char[][] arr) {
 		a=arr;
+		upperHalf_I=0;lowerHalf_I=0;leftHalf_I=0;rightHalf_I=0; // initialize to 0
 		for(int c=0; c<N; c++){		//upperHalf
 			for (int r=0; r<2*N; r++) {
 				if(a[c][r]=='I' || a[c][r]=='i') {
@@ -73,8 +78,8 @@ class cal {
 			}
 		}
 
-		for(int c=0; c<N; c++){		//rightHalf
-			for (int r=0; r<2*N; r++) {
+		for(int c=0; c<2*N; c++){		//rightHalf
+			for (int r=N; r<2*N; r++) {
 				if(a[c][r]=='I' || a[c][r]=='i') {
 					rightHalf_I++;
 				}				
@@ -82,11 +87,11 @@ class cal {
 		}
 	}
 
-	public void solve() {				
-		
+	public int solve(int case_num) {	
+		ans=0;
 		if(upperHalf_I - lowerHalf_I >0) {
 			ans= ans+ upperHalf_I - lowerHalf_I ;
-		}else {
+		}else if(upperHalf_I - lowerHalf_I <0){
 			ans= ans - upperHalf_I + lowerHalf_I ;
 		}
 
@@ -94,10 +99,14 @@ class cal {
 			ans= ans *( leftHalf_I - rightHalf_I );
 		}else if(leftHalf_I - rightHalf_I <0) {
 			ans= ans * (rightHalf_I - leftHalf_I );
-
-		}			
+		}
+		
+		return ans;
+		
 	}
-	void print_ans(int case_num) {
-		System.out.println("Case #"+case_num+":"+ans);	
+	
+	void display(int case_num,int ans) {
+		System.out.println("Case #"+case_num+":"+ans);
 	}
+	
 }
