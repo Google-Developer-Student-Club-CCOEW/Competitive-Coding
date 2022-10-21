@@ -1,0 +1,29 @@
+public class Issue123 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n= sc.nextInt();
+        HashMap<String,Integer> hmap = new HashMap<>();
+        for(int i = 0; i < n; ++i) {
+            String input = sc.next();
+            if(hmap.get(input) == null) hmap.put(input,1);
+            else {
+                int val = hmap.get(input);
+                hmap.put(input,++val);
+            }
+        }
+
+        int Q = sc.nextInt();
+        
+        while(Q-->0) {
+            String query = sc.next();
+            if
+            {
+              (hmap.get(query) == null) System.out.println(0);
+              
+             }
+            else 
+            System.out.println(hmap.get(query));
+        }
+    }
+}
