@@ -1,4 +1,4 @@
-package tangible;
+
 
 import java.io.IOException;
 import java.util.*;
@@ -19,11 +19,11 @@ public class LShape
             int c;
             r = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
             c = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
-            ArrayList<ArrayList<Integer>> g = tangible.VectorHelper.nestedArrayList(r, c, 0);
-            ArrayList<ArrayList<Integer>> gr = tangible.VectorHelper.nestedArrayList(r, c, 0);
-            ArrayList<ArrayList<Integer>> grr = tangible.VectorHelper.nestedArrayList(r, c, 0);
-            ArrayList<ArrayList<Integer>> gc = tangible.VectorHelper.nestedArrayList(r, c, 0);
-            ArrayList<ArrayList<Integer>> gcc = tangible.VectorHelper.nestedArrayList(r, c, 0);
+            ArrayList<ArrayList<Integer>> g = VectorHelper.nestedArrayList(r, c, 0);
+            ArrayList<ArrayList<Integer>> gr = VectorHelper.nestedArrayList(r, c, 0);
+            ArrayList<ArrayList<Integer>> grr =VectorHelper.nestedArrayList(r, c, 0);
+            ArrayList<ArrayList<Integer>> gc = VectorHelper.nestedArrayList(r, c, 0);
+            ArrayList<ArrayList<Integer>> gcc =VectorHelper.nestedArrayList(r, c, 0);
 
             for (int i = 0; i < r; ++i)
             {
@@ -145,7 +145,7 @@ public class LShape
 }
 
 
- final class VectorHelper
+final class VectorHelper
 {
     public static <T> void resize(ArrayList<T> list, int newSize)
     {
