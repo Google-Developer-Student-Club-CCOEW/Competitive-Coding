@@ -1,3 +1,10 @@
+/*
+Question 26
+___________
+
+
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std ;
