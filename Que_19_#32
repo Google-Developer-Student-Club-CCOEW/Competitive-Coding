@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-public class que19 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		char arr[][]=new char[100][100];	//will store char array of O's and I's
 		int N, upperHalf_I=0, lowerHalf_I=0, leftHalf_I=0, rightHalf_I=0;
 		String column[]=new String[100];
 		char a[][]=new char[100][100];
-		
+
 		String temp;
 
 		int T=sc.nextInt();					// Asking for num of text cases
 		int[] ans=new int[T];
+		
 		for(int i=0; i<T; i++) {
-
 			//accepting vals
 			N=sc.nextInt();				// accept num of N
 			sc.nextLine();
@@ -21,15 +21,13 @@ public class que19 {
 				column[c]=sc.nextLine();
 				temp=column[c];
 				for (int r=0; r<2*N; r++) {
-					a[c][r]=temp.charAt(r);		
-
-
+					a[c][r]=temp.charAt(r);	
 				}
 			}
 
 
 			//counting I
-			
+
 			upperHalf_I=0;lowerHalf_I=0;leftHalf_I=0;rightHalf_I=0; // initialize to 0
 			arr=a;
 			for(int c=0; c<N; c++){		//upperHalf
@@ -68,16 +66,29 @@ public class que19 {
 			ans[i]=0;
 			if(upperHalf_I - lowerHalf_I >0) {
 				ans[i]= ans[i]+ upperHalf_I - lowerHalf_I ;
-			}else if(upperHalf_I - lowerHalf_I <0){
+			}
+			else if(upperHalf_I - lowerHalf_I <0){
 				ans[i]= ans[i] - upperHalf_I + lowerHalf_I ;
 			}
 
-			if(leftHalf_I - rightHalf_I >0 ) {
-				ans[i] = ans[i] *( leftHalf_I - rightHalf_I );
-			}else if(leftHalf_I - rightHalf_I <0) {
-				ans[i] = ans[i] * (rightHalf_I - leftHalf_I );
+			if(ans[i] != 0) {
+				if(leftHalf_I - rightHalf_I >0 ) {
+					ans[i] = ans[i] *( leftHalf_I - rightHalf_I );
+				}
+				else if(leftHalf_I - rightHalf_I <0) {
+					ans[i] = ans[i] * (rightHalf_I - leftHalf_I );
 
+				}
 			}
+			else if(ans[i]==0) {
+				if(leftHalf_I - rightHalf_I >0) {
+					ans[i]= ans[i]+ leftHalf_I - rightHalf_I ;
+				}
+				else if(leftHalf_I - rightHalf_I <0){
+					ans[i]= ans[i] - leftHalf_I + rightHalf_I ;
+				}
+			}
+			
 		}
 
 		for(int i=0; i<T; i++) {
