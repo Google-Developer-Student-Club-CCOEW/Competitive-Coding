@@ -1,0 +1,54 @@
+class Issue111 {
+    public int[] productQueries(int n, int[][] q) {
+        int x=getPow(n);
+
+        int f=1;
+        
+        int[] p=new int[x];
+        p[0]=1;
+        for(int i=1;i<x;i++){
+            f=f*2;
+            p[i]=f;
+        }
+        int k=x-1;
+        int m=0;
+        while(k>=0){
+            if(n>=p[k]){
+                n=n-p[k];
+                m++;
+            }else{
+                p[k]=0;
+            }
+            k--;
+        }
+        int[] s=new int[m];
+        int d=0;
+        for(int i=0;i<x;i++){
+            if(p[i]>0){
+                s[d++]=p[i];
+            }
+
+        }
+        
+        int[] r=new int[q.length];
+        int z=1000000007;
+        
+        for(int i=0;i<r.length;i++){
+            int g = 1;
+            for(int j=q[i][0];j<=q[i][1];j++){
+            //typecasting it into integer
+                g=(int)((long)g*s[j]%z);
+
+            }
+            r[i]=g;
+        }
+        return r;
+    }
+    
+    int getPow(int n){
+        if(n==0){
+            return 0;
+        }
+        return 1+getPow(n/2);
+    }
+}
