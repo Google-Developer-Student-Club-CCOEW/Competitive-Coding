@@ -1,0 +1,62 @@
+
+
+public static void solution(String[] str, char[] ch, BufferedReader reader) throws java.lang.Exception
+	{
+	     int N = Integer.parseInt(str[0]);
+	     int K = Integer.parseInt(str[1]);
+	     int Q = Integer.parseInt(str[2]);
+	     int[] far = new int[N+1];
+	     int count_0 = 0, count_1 = 0, j = 1;
+	     if(ch[0] == '1')count_1++;
+	     else count_0++;
+	     for(int i = 1; i <= N; i++){
+	          while(j <= N && count_0 <= K && count_1 <= K)
+	          {
+	               j++;
+	               if(j > N)break;
+	               if(ch[j-1] == '1')count_1++;
+	               else count_0++;
+	          }
+	          far[i] = j;//System.out.println(count_0+" "+count_1);
+	          if(ch[i-1] == '1')count_1--;
+	          else count_0--;
+	     }
+	     //for(int i = 1; i<= N; i++)
+	     //System.out.print(far[i]+" ");
+	     long[] sumfar = new long[N+1];
+	     sumfar[0] = 0;
+	     for(int i = 1; i <= N; i++)
+	     sumfar[i] = sumfar[i-1] + far[i];
+	     String[] s;
+	     for(int i = 0; i < Q; i++){
+	          s = reader.readLine().split(" ");
+	          long L = Long.parseLong(s[0]);
+	          long R = Long.parseLong(s[1]);
+	          long ans = 0;
+	          long k1 = L-1, k2 = R+1, km = 0;
+	          while(k2 - k1 > 1){
+	               km = (k1 + k2) / 2;
+	               if(far[(int)km] <= R) k1 = km;
+	               else k2 = km;
+	          }
+	          long k = k1;
+	          ans = sumfar[(int)k] - sumfar[(int)L-1] + (R-k)*(R+1) - R*(R+1)/2 + L*(L-1)/2;
+	          System.out.println(ans);
+	     }
+	}
+
+
+
+
+
+public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int no_of_testcases = Integer.parseInt(reader.readLine());
+		while(no_of_testcases-- > 0){
+		     String[] str = reader.readLine().split(" ");
+		     char[] ch = reader.readLine().toCharArray();
+		     solution(str, ch, reader);
+		}
+	}
+	
