@@ -1,7 +1,5 @@
 # Competitive-Coding
 
-Imp Links -> [Issues](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/issues) | [Contributors](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/graphs/contributors) | [Insights](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/pulse)
-
 ![GDSC](https://user-images.githubusercontent.com/56436897/193326497-f15493fe-c12e-455f-b86c-28fcf539e7a7.png)
 ---
 ## What is Competitive-Coding ?
