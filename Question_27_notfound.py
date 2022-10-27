@@ -1,3 +1,9 @@
+'''
+Question 27
+___________
+
+'''
+
 r = 3   #rows
 c = 3   #columns
 import sys
