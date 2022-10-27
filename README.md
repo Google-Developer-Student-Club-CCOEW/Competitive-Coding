@@ -1,6 +1,6 @@
 # Competitive-Coding
 
-[![GitHub contributors](https://img.shields.io/github/contributors/coderjojo/creative-profile-readme)](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/coderjojo/creative-profile-readme)]Issues: (https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/issues)
+Imp Links -> [Issues](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/issues) | [Contributors](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/graphs/contributors) | [Insights](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/pulse)
 
 ![GDSC](https://user-images.githubusercontent.com/56436897/193326497-f15493fe-c12e-455f-b86c-28fcf539e7a7.png)
 ---
