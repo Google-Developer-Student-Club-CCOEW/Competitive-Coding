@@ -32,24 +32,33 @@ public class question169 {
         System.out.println("C=" + c);
         System.out.println("inavlid votes=" + d);
 
-        if (a > b && a > c && a > d) {
-            System.out.println("winner=" + 'A');
+        if (arr.length == 0) {
+            System.out.println("winner=N/A");
         }
-        if (b > a && b > c && b > d) {
-            System.out.println("winner=" + 'B');
+
+        if (arr.length > 0) {
+            if (a >= b && a >= c && a > d) {
+                System.out.println("winner=" + 'A');
+            }
+            if (b > a && b >= c && b > d) {
+                System.out.println("winner=" + 'B');
+            }
+            if (c > b && c > a && c > d) {
+                System.out.println("winner=" + 'C');
+            }
+            if (d > b && d > a && d > c) {
+                System.out.println("winner=N/A");
+            }
         }
-        if (c > b && c > a && c > d) {
-            System.out.println("winner=" + 'C');
-        }
-        if (d > b && d > a && d > c) {
+
+        if (d == b || d == a || d == c) {
             System.out.println("winner=N/A");
         }
 
     }
 
     public static void main(String[] args) {
-        char arr[] = { 'A', 'B', 'C', 'D', 'F', 'L', 'A', 'A', 'A', 'A' };
+        char arr[] = { 'A', 'B', 'C', 'D', 'F', 'L', 'A', 'A', 'A', 'A', '9', '8', };
         countVotes(arr);
     }
-}
 }
