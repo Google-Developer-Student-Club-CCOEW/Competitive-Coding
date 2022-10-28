@@ -1,0 +1,14 @@
+import math
+m=int(input())
+for i in range(m):
+    a=int(input())
+    b=list(map(int,input().split()))
+    c=0
+    d=[]
+    for i in range(0,a):
+        c=math.gcd(c,b[i])
+        d.append(c)
+    if d==b:
+        print(*d)
+    else:
+        print(-1)
