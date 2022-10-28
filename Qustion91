@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define      ll        long long
+#define      yes       cout<<"YES"<<endl 
+#define      no        cout<<"NO"<<endl 
+#define      vp        vector<pair<ll, ll>> 
+#define      vl        vector<ll>
+#define      vvl       vector<vector<ll>>
+#define      vvlin     for(int i=0;i<vec.size();i++){ for(int j=0;j<vec[i].size();j++){ cin>>vec[i][j];}}
+#define      vvlout    for(int i=0;i<vec.size();i++){ for(int j=0;j<vec[i].size();j++){ cout<<vec[i][j]<<" ";}}
+#define      arrin     ll a[n]; for(int i=0;i<n;i++){cin>>a[i];}
+#define      fin       for(int i=0;i<n;i++)
+#define      fjn       for(int j=0;j<n;j++)
+#define      fkn       for(int k=0;k<n;k++)
+#define      arrout    for(int i=0;i<n;i++){cout<<a[i]<<" ";}
+const int M=1e9+7;
+
+int main(){
+     ios_base::sync_with_stdio(false);
+     cin.tie(NULL);
+
+    ll n;cin>>n;
+    ll a[n];
+    fin{
+        cin>>a[i];
+    }
+    unordered_map<ll,ll>hash;
+    fin{
+        hash[a[i]]++;
+    }
+    ll c=0;
+    for(auto it:hash){
+           c+=(it.second/2);
+    }
+    cout<<c<<"\n";
+    return 0;
+}
