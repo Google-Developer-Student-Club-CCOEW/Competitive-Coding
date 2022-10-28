@@ -1,9 +1,22 @@
 # Competitive-Coding
 
 ![GDSC](https://user-images.githubusercontent.com/56436897/193326497-f15493fe-c12e-455f-b86c-28fcf539e7a7.png)
+---
+## What is Competitive-Coding ?
+The main aim of competitive programming is to write code solve given problems. The problems are generally mathematical or logical nature and require comprehensive knowledge of data structures, geometry, number theory and graph theory to name a few. Problems related to Artificial Intelligence and Code golf are also popular nowadays. 
+
+_It’s called “competitive” coding but most people get involved only to improve their own coding skills or just for the thrill of it_.
+
+---
 
 
-## Contributing to this Repo
+This repository includes a variety of competitive programming problems and the code answers to them. By providing solutions to them, you can make a contribution. Just comment on the issue you want to code for. To contribute, simply follow the steps below!
+
+## How to Contribute to this repo ?
+### Search Issue -> Comment -> Get Assigned -> Create fork -> solve -> Create a pull request !!!
+**Imp Links** -> [_Issues_](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/issues) | [_Contributors_](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/graphs/contributors) | [_Insights_](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/pulse)
+--- ---
+( Below are specific steps )
 
 **1.** Fork [this](https://github.com/Google-Developer-Student-Club-CCOEW/Competitive-Coding/fork) repository.
 
