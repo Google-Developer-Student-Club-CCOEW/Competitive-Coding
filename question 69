@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int x=sc.nextInt();
+		while(x-->0) {
+			int a=sc.nextInt();
+			int b[]=new int[a];
+			int c[]=new int[a];
+			for(int i=0;i<a;i++) {
+				b[i]=sc.nextInt();
+			}
+			for(int i=0;i<a;i++) {
+				c[i]=sc.nextInt();
+			}
+			Arrays.sort(b);
+			Arrays.sort(c);
+			int m=a-1,sum=0,max=0;
+			for(int i=0;i<a;i++) {
+				sum=b[i]+c[m];
+				if(max<=sum)
+					max=sum;
+				sum=0;
+				m--;
+			}
+			System.out.println(max);
+		}
+	}
+
+}
