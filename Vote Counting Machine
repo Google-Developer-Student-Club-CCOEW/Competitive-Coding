@@ -1,0 +1,55 @@
+/*Design a vote counting machine that can input valid candidates' names and vote cast list, we need your help to write a f
+unction to find the number of votes cast against each good candidate, invalid vote counts, and finally the winner's name.
+
+Note: If two candidates have the same votes then the winner can be 
+finalized based on the order of valid candidates. If the number of i
+invalid ballots is more or if the vote casted list is empty then output Winner = N/A*/
+
+
+public class question169 {
+    public static void countVotes(char[] arr) {
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 'A') {
+                a++;
+            }
+            if (arr[i] == 'B') {
+                b++;
+            }
+            if (arr[i] == 'C') {
+                c++;
+            }
+            if (arr[i] != 'A' && arr[i] != 'C' && arr[i] != 'B') {
+                d++;
+            }
+        }
+
+        System.out.println("A=" + a);
+        System.out.println("B=" + b);
+        System.out.println("C=" + c);
+        System.out.println("inavlid votes=" + d);
+
+        if (a > b && a > c && a > d) {
+            System.out.println("winner=" + 'A');
+        }
+        if (b > a && b > c && b > d) {
+            System.out.println("winner=" + 'B');
+        }
+        if (c > b && c > a && c > d) {
+            System.out.println("winner=" + 'C');
+        }
+        if (d > b && d > a && d > c) {
+            System.out.println("winner=N/A");
+        }
+
+    }
+
+    public static void main(String[] args) {
+        char arr[] = { 'A', 'B', 'C', 'D', 'F', 'L', 'A', 'A', 'A', 'A' };
+        countVotes(arr);
+    }
+}
+}
