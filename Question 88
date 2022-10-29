@@ -1,0 +1,37 @@
+/*Alice and Bob are ready to play a new game. Both the players take alternate turns. Alice starts first.
+
+There are N binary numbers written on a blackboard.
+
+Alice, in her turn, erases any 2 numbers from the blackboard and writes the bitwise OR of those 2 numbers on the blackboard.
+Bob, in his turn, erases any 2 numbers from the blackboard and writes the bitwise AND of those 2 numbers on the blackboard.
+Note that, after each move, the count of numbers written on the blackboard reduces by 1.
+*/
+
+
+import java.util.*;
+
+public class Question88{
+    public static void main(Strings args[]){
+    Scanner sc = new Scanner(System.in);
+		int m = sc.nextInt();
+		while(m-->0){
+		    int n = sc.nextInt();
+		    int ones=0,zeros=0;
+		    for(int i=0;i<n;i++){
+		        int x=sc.nextInt();
+		        if(x==0){
+		            zeros++;
+		        }else{
+		            ones++;
+		        }
+		    }
+		    if(ones>=zeros){
+		        System.out.println(1);
+		    }else{
+		       System.out.println(0);
+		    }
+		}
+    
+    }
+    
+ }
