@@ -1,14 +1,17 @@
 
-# STRINGS
+# STRINGS	
 
-Strings are defined as an array of characters. 
+Strings are defined as an array of characters.
+
 Some examples of string- String s= ”cummins”
 
  
+![image](https://user-images.githubusercontent.com/104774832/198837090-7d810d25-a855-49d5-86e7-a38b0c7dfa72.png)
 
 ## HOW DOES A STRING WORK?
 
 In programming, a String is used as a datatype just like int or float might be used; however, the difference here is that, String deals with textual kind of data. It can consist of alphabets, numbers, spaces and special characters. Strings are often enclosed in double quotation marks. In java string is treated not as a data type but as an object.
+![image](https://user-images.githubusercontent.com/104774832/198837200-492d9e3b-d9fb-481d-a97c-4e491cdaa998.png)
 
  
 
@@ -25,6 +28,8 @@ String literal is the more memory efficient way as it checks the memory pool and
 For eg- String w= “ welcome”;
 A new instance will not be created here as “welcome” already exists. Instead both s and w will point to the memory location where its stored.
  
+ ![image](https://user-images.githubusercontent.com/104774832/198837220-760d4a01-6abe-4989-9fa6-7287c4a2384a.png)
+
 ### 2) BY NEW KEYWORD
 
 String s=new String("Welcome");
@@ -33,7 +38,8 @@ This will create a new string object in normal (non-pool) heap memory, and the l
 ## TIME COMPLEXITY AND SPACE COMPLEXITY
 
 A string is a data structure in computer science used to store the sequence of characters. Each character in the string consists of a specific index. Below is its time and space complexity.
- 
+ ![image](https://user-images.githubusercontent.com/104774832/198837241-bd9aa306-7928-4164-85bc-f62f02d7831a.png)
+
 ### Time Complexity of String containing ‘N’ characters:
 
 •	Reading or editing any character stored at a particular index takes O(1) time, as similar to arrays, its relative index can also be calculated in constant time.
@@ -44,11 +50,16 @@ A string is a data structure in computer science used to store the sequence of c
 
 As we do not need any extra space to perform all the operations mentioned above, the space complexity of reading, editing, inserting, or deleting is constant i.e., O(1). Only the space taken to create the string is the auxiliary space.
  
+![image](https://user-images.githubusercontent.com/104774832/198837257-c8744a01-65c0-4728-93e8-632bd07021dc.png)
 
 ## FUNCTIONS IN STRING
 
 String in java comes with some inbuilt functions to help the user.
 Some of the most common functions are- length(), charAt(), concat() etc
+
+![s1](https://user-images.githubusercontent.com/104774832/198837538-ed9acb92-d99c-4948-80f4-19066b02e1b0.png)
+![s2](https://user-images.githubusercontent.com/104774832/198837545-5a513208-8159-40c8-9338-377c857a5857.png)
+![s3](https://user-images.githubusercontent.com/104774832/198837550-77bf3f84-276b-44d0-aef5-fba454885c85.png)
 
 
 
