@@ -1,0 +1,59 @@
+#include<stdio.h>
+int main()
+{
+    int vis[50],votes[50],num,n,illegal=0,sum=0;
+    char name[10],ans='#';
+    for(int i=0;i<45;i++) //initialize
+    {
+        votes[i]=0;
+        vis[i]=0;
+    }
+    scanf("%d",&num); //get name
+    while(num--)
+    {
+        scanf("%s",name);
+        vis[name[0]-'A']++;
+    }
+
+    scanf("%d",&n);
+    int maxx=-1;
+    for(int i=0;i<n;i++)
+    {
+        scanf("%s",name);
+        if(vis[name[0]-'A']==0) //The name does not appear
+        {
+            illegal++;
+        }
+        else
+        {
+            sum++; //The number of legitimate votes cast
+            votes[name[0]-'A']++;
+            if(votes[name[0]-'A']>maxx) //Update the maximum number of votes
+            {
+                maxx=votes[name[0]-'A'];
+            }
+        }
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        if(votes[i]>=1)
+        {
+            printf("%c=%d ",(i+'A'),votes[i]);
+            if(votes[i]==maxx&&ans=='#')
+            {
+                ans=(i+'A');
+            }
+        }
+    }
+    printf("invalidVotes=%d Winner ",illegal);
+    if((illegal>sum)||sum==0)
+    {
+        printf("= N/A");
+    }
+    else
+    {
+        printf("%c",ans);
+    }
+
+}
