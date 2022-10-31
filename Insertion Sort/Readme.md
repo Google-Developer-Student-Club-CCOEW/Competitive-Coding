@@ -10,4 +10,4 @@ The simple steps of achieving the insertion sort are listed as follows -
 6. At the end of loop the array will be sorted.
 7. Display the sorted array.
 
-<img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/insertionsort.png" alt="Insersion Sort"/>
+<img align="center" src="https://www.w3resource.com/w3r_images/insertion-sort.png" alt="Insersion Sort"/>
