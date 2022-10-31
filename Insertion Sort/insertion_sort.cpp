@@ -30,7 +30,6 @@ int main()
         // printing the sorted array
         cout << arr[i] << " ";
     }
-    
 
     return 0;
 }
