@@ -1,5 +1,9 @@
 # Insertion Sort
-## Algorithm
+Insertion sort is a simple and stable sorting algorithm that builds the final sorted array one item at a time by comparisons.
+- **Time Complexity**: Best -> O(n) and worst -> O(n^2)
+- **Space Complexity**: O(1) 
+
+## Algorithm:
 The simple steps of achieving the insertion sort are listed as follows -
 
 1. Assume that, the element is the first element is already sorted.
@@ -10,4 +14,8 @@ The simple steps of achieving the insertion sort are listed as follows -
 6. At the end of loop the array will be sorted.
 7. Display the sorted array.
 
+## Algorithm explanation with example:
 <img align="center" src="https://www.w3resource.com/w3r_images/insertion-sort.png" alt="Insersion Sort"/>
+
+## Insertion Sort representation by animation:
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif">
